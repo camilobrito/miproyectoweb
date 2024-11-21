@@ -3,38 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InvestPro: Innovación, Tecnología y Sostenibilidad</title>
+    <title>InvestPro - Innovación en Inversiones</title>
     <style>
         /* Estilo general */
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
-            line-height: 1.6;
+            background-color: #0d0d0d;
+            color: #f0f0f0;
+            line-height: 1.8;
         }
 
         /* Cabecera */
         header {
-            background: linear-gradient(to right, #004d40, #1b5e20);
+            background: linear-gradient(to right, #1a535c, #4caf50);
             color: white;
-            padding: 3rem 0;
             text-align: center;
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        header img {
+            width: 150px;
+            margin-bottom: 1rem;
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin: 0;
         }
 
         header p {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-top: 0.5rem;
         }
 
         /* Menú de navegación */
         nav {
-            background: #1b5e20;
+            background: #4caf50;
             padding: 1rem 0;
         }
 
@@ -68,8 +74,7 @@
 
         .section h2 {
             font-size: 2.5rem;
-            color: #e53935;
-            margin-bottom: 1rem;
+            color: #4caf50;
             text-align: center;
         }
 
@@ -79,46 +84,27 @@
         }
 
         .highlight {
-            color: #4caf50;
+            color: #e53935;
             font-weight: bold;
         }
 
-        /* Figuras geométricas */
-        .shapes {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
+        .concepts, .phases {
             margin-top: 2rem;
+            padding: 1rem;
+            background: #1b1b1b;
+            border-radius: 10px;
         }
 
-        .shape {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: #004d40;
-        }
-
-        .shape.square {
-            border-radius: 0;
-            background: #1b5e20;
-        }
-
-        .shape.triangle {
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-bottom: 100px solid #e53935;
+        .concepts h3, .phases h3 {
+            color: #4caf50;
         }
 
         /* Footer */
         footer {
-            background: #004d40;
+            background: #1a535c;
             color: white;
             text-align: center;
             padding: 2rem 0;
-            margin-top: 3rem;
         }
 
         footer a {
@@ -133,16 +119,16 @@
 </head>
 <body>
     <header>
+        <img src="img.jpg" alt="img.jpg">
         <h1>InvestPro</h1>
-        <p>La plataforma definitiva para inversiones, programación y sostenibilidad</p>
+        <p>La combinación perfecta de innovación, programación y sostenibilidad en inversiones</p>
     </header>
 
     <nav>
         <ul>
             <li><a href="#introduction">Introducción</a></li>
-            <li><a href="#investment-strategies">Estrategias de Inversión</a></li>
-            <li><a href="#programming-and-tech">Tecnología y Programación</a></li>
-            <li><a href="#sustainability">Sostenibilidad</a></li>
+            <li><a href="#investment-programming">Programación de Inversiones</a></li>
+            <li><a href="#technologies">Tecnología y Modelos</a></li>
             <li><a href="#contact">Contacto</a></li>
         </ul>
     </nav>
@@ -150,32 +136,32 @@
     <main>
         <section id="introduction" class="section">
             <h2>Introducción</h2>
-            <p>En <span class="highlight">InvestPro</span>, creemos en el poder de la tecnología y la programación para revolucionar las inversiones y crear un impacto positivo en el medio ambiente. Nuestra misión es educar, empoderar y proporcionar herramientas para tomar decisiones financieras responsables.</p>
-            <div class="shapes">
-                <div class="shape"></div>
-                <div class="shape square"></div>
-                <div class="shape triangle"></div>
+            <p><span class="highlight">InvestPro</span> ofrece un enfoque único para conectar la tecnología, la programación y la sostenibilidad con estrategias de inversión modernas. Nuestro objetivo es educar y empoderar a individuos e instituciones para que tomen decisiones informadas.</p>
+        </section>
+
+        <section id="investment-programming" class="section">
+            <h2>Programación de Inversiones</h2>
+            <p>La <span class="highlight">programación de inversiones</span> es un proceso crítico para optimizar el uso de recursos en proyectos que promuevan el desarrollo económico y social. Este proceso sigue fases claves:</p>
+            <div class="phases">
+                <h3>Fases del Proceso</h3>
+                <ul>
+                    <li><strong>Planeación:</strong> Identificación de necesidades y formulación del programa.</li>
+                    <li><strong>Ejecución:</strong> Implementación de los proyectos seleccionados.</li>
+                    <li><strong>Evaluación:</strong> Análisis posterior para medir el éxito y realizar ajustes.</li>
+                </ul>
             </div>
         </section>
 
-        <section id="investment-strategies" class="section">
-            <h2>Estrategias de Inversión</h2>
-            <p>Las inversiones modernas requieren un enfoque integral. Aquí te presentamos las estrategias más innovadoras:</p>
-            <ul>
-                <li><strong>Inversiones algorítmicas:</strong> Utilizando inteligencia artificial para maximizar el rendimiento.</li>
-                <li><strong>Crowdfunding:</strong> Financiar ideas disruptivas con un impacto social.</li>
-                <li><strong>Criptomonedas:</strong> Aprovecha la descentralización para diversificar tus activos.</li>
-            </ul>
-        </section>
-
-        <section id="programming-and-tech" class="section">
-            <h2>Tecnología y Programación</h2>
-            <p>La programación es la columna vertebral de las herramientas de inversión modernas. Desde bots de trading hasta plataformas de análisis, el código impulsa el cambio en el sector financiero. Explora cómo puedes aprender a desarrollar soluciones efectivas.</p>
-        </section>
-
-        <section id="sustainability" class="section">
-            <h2>Sostenibilidad</h2>
-            <p>La sostenibilidad no es solo una tendencia, es una necesidad. Aquí abordamos cómo invertir en proyectos ecológicos, energías renovables y tecnologías limpias para proteger nuestro planeta mientras generamos beneficios financieros.</p>
+        <section id="technologies" class="section">
+            <h2>Tecnología y Modelos</h2>
+            <p>La tecnología juega un papel clave en la programación de inversiones. Los modelos avanzados, como la programación lineal, ayudan a asignar recursos eficientemente:</p>
+            <div class="concepts">
+                <h3>Conceptos Clave</h3>
+                <ul>
+                    <li><strong>Inversión Pública:</strong> Centrarse en infraestructura y servicios para maximizar el impacto social.</li>
+                    <li><strong>Modelos Matemáticos:</strong> Uso de algoritmos para priorizar proyectos según restricciones y objetivos.</li>
+                </ul>
+            </div>
         </section>
     </main>
 
