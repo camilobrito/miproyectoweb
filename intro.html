@@ -1,60 +1,280 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invest Tech</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Invest Pro - Programación y Soluciones de Inversión">
+    <title>Invest Pro - Programación e Inversiones</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Header with logo */
+        header {
+            position: relative;
+            background-color: #232a34;
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header .logo {
+            background: url('img.jpg') no-repeat center center/contain;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #bbb;
+        }
+
+        nav {
+            background: #3a4750;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00adb5;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #232a34;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero .btn {
+            padding: 10px 20px;
+            background: #00adb5;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background: #007b83;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .services {
+            background-color: #f9f9f9;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #00adb5;
+        }
+
+        .services-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-item {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .service-item img {
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .service-item h3 {
+            font-size: 1.5rem;
+            color: #232a34;
+        }
+
+        .service-item p {
+            color: #6d6d6d;
+        }
+
+        .testimonials {
+            background-color: #f8f9fa;
+        }
+
+        .testimonials h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #00adb5;
+        }
+
+        .testimonial {
+            font-style: italic;
+            color: #6d6d6d;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial span {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+            color: #232a34;
+        }
+
+        .contact {
+            background-color: #fff;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #00adb5;
+        }
+
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            background-color: #00adb5;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact button:hover {
+            background-color: #007b83;
+        }
+
+        footer {
+            background-color: #232a34;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Invest Tech</h1>
-            <p>Explorando la conexión entre inversiones, programación y sostenibilidad</p>
-        </div>
+        <div class="logo"></div>
+        <h1>Invest Pro</h1>
+        <p>Innovación en Programación e Inversiones</p>
     </header>
-
     <nav>
         <ul>
-            <li><a href="#introduction">Introducción</a></li>
-            <li><a href="#investment-types">Tipos de Inversiones</a></li>
-            <li><a href="#programming-and-tech">Programación y Tecnología</a></li>
-            <li><a href="#sustainability">Sostenibilidad</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#testimonials">Testimonios</a></li>
             <li><a href="#contact">Contacto</a></li>
         </ul>
     </nav>
-
-    <main>
-        <section id="introduction" class="section">
-            <h2>Introducción</h2>
-            <p>La intersección entre inversiones, programación y tecnología sostenible está transformando el mundo. En este sitio, descubrirás cómo estas áreas pueden trabajar juntas para generar impacto positivo.</p>
-        </section>
-
-        <section id="investment-types" class="section">
-            <h2>Tipos de Inversiones</h2>
-            <ul>
-                <li><strong>Inversiones en startups tecnológicas:</strong> Apoyando nuevas ideas y modelos de negocio.</li>
-                <li><strong>Trading de criptomonedas:</strong> El futuro descentralizado del dinero.</li>
-                <li><strong>Inversiones en sostenibilidad:</strong> Energías renovables, reciclaje y más.</li>
-            </ul>
-        </section>
-
-        <section id="programming-and-tech" class="section">
-            <h2>Programación y Tecnología</h2>
-            <p>Desde algoritmos de trading hasta herramientas para optimizar inversiones, la programación juega un papel clave en la evolución del sector financiero.</p>
-        </section>
-
-        <section id="sustainability" class="section">
-            <h2>Sostenibilidad</h2>
-            <p>La tecnología está ayudando a crear modelos financieros más responsables. Aprende cómo las inversiones pueden generar impacto positivo en el medio ambiente.</p>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Invest Tech. Creado por Juan Camilo.</p>
-            <p><a href="#contact">Contacto</a></p>
+    <section class="hero">
+        <h1>Soluciones Inteligentes con Invest Pro</h1>
+        <p>El futuro de la programación y las inversiones comienza aquí.</p>
+        <a href="#services" class="btn">Explorar Servicios</a>
+    </section>
+    <section id="services" class="section services">
+        <h2>Nuestros Servicios</h2>
+        <div class="services-items">
+            <div class="service-item">
+                <img src="img1.jpg" alt="Desarrollo Web">
+                <h3>Desarrollo Web</h3>
+                <p>Páginas web a medida para empresas y emprendedores. $1,000,000</p>
+            </div>
+            <div class="service-item">
+                <img src="img2.jpg" alt="Consultoría en Inversiones">
+                <h3>Consultoría en Inversiones</h3>
+                <p>Asesoramiento experto para maximizar tus rendimientos. $800,000</p>
+            </div>
+            <div class="service-item">
+                <img src="img3.jpg" alt="Automatización de Procesos">
+                <h3>Automatización de Procesos</h3>
+                <p>Optimización empresarial con tecnología avanzada. $1,200,000</p>
+            </div>
         </div>
+    </section>
+    <section id="testimonials" class="section testimonials">
+        <h2>Testimonios</h2>
+        <p class="testimonial">"Invest Pro mejoró mis sistemas y me ayudó a triplicar mi rentabilidad. ¡Recomendados!" <span>- Laura Gómez</span></p>
+        <p class="testimonial">"La mejor consultora en programación e inversiones que he conocido." <span>- José Pérez</span></p>
+    </section>
+    <section id="contact" class="section contact">
+        <h2>Contacto</h2>
+        <form action="#" method="POST">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <textarea placeholder="Mensaje" rows="4" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <p>Teléfono: +57 3233706529| Correo: camilibrito457@gmail.com.com</p>
+        <p>Ubicación: Calle 123, Ciudad cali , País colombia</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Invest Pro. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
