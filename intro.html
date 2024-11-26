@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Invest Pro - Programación y Soluciones de Inversión">
-    <title>Invest Pro - Programación e Inversiones</title>
+    <meta name="description" content="Alpha Gain - Your Partner in Smart Investments">
+    <title>Alpha Gain</title>
     <style>
         /* General Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
+            background-color: #1b1b2f;
+            color: #eaeaea;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         img {
@@ -25,256 +27,271 @@
             height: auto;
         }
 
-        /* Header with logo */
-        header {
-            position: relative;
-            background-color: #232a34;
-            color: #fff;
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        header .logo {
-            background: url('img.jpg') no-repeat center center/contain;
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 20px;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            color: #bbb;
-        }
-
+        /* Navbar */
         nav {
-            background: #3a4750;
-            display: flex;
-            justify-content: center;
-            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(27, 27, 47, 0.95);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
         }
 
         nav ul {
             display: flex;
-            gap: 2rem;
+            justify-content: center;
             list-style: none;
+            gap: 2rem;
         }
 
         nav ul li a {
             text-decoration: none;
-            color: #fff;
+            color: #eaeaea;
+            font-size: 1.2rem;
             font-weight: bold;
             transition: color 0.3s ease;
         }
 
         nav ul li a:hover {
-            color: #00adb5;
+            color: #ff8c00;
         }
 
-        /* Hero Section */
-        .hero {
-            background: rgba(255, 255, 255, 0.8);
+        /* Header Section */
+        header {
+            height: 100vh;
+            background: linear-gradient(to bottom, rgba(27, 27, 47, 0.8), rgba(27, 27, 47, 0.95)), url('img.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 100px 20px;
+            color: #eaeaea;
+            position: relative;
         }
 
-        .hero h1 {
-            font-size: 3rem;
-            color: #232a34;
+        header h1 {
+            font-size: 4.5rem;
+            font-weight: bold;
+            color: #ff8c00;
+            text-transform: uppercase;
             margin-bottom: 1rem;
         }
 
-        .hero p {
+        header p {
             font-size: 1.5rem;
             margin-bottom: 2rem;
         }
 
-        .hero .btn {
-            padding: 10px 20px;
-            background: #00adb5;
-            color: #fff;
+        header a {
+            padding: 12px 30px;
+            background: #ff8c00;
+            color: #1b1b2f;
+            font-size: 1.2rem;
+            text-transform: uppercase;
             text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            border-radius: 25px;
+            transition: transform 0.3s ease, background 0.3s ease;
         }
 
-        .hero .btn:hover {
-            background: #007b83;
+        header a:hover {
+            transform: scale(1.1);
+            background: #e67e00;
         }
 
-        .section {
-            padding: 4rem 2rem;
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        section h2 {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #ff8c00;
+        }
+
+        section p {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #eaeaea;
+        }
+
+        /* Team Section */
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-member {
+            background: #252545;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            padding: 2rem;
             text-align: center;
         }
 
-        .services {
-            background-color: #f9f9f9;
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
         }
 
-        .services h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #00adb5;
+        .team-member h3 {
+            color: #ff8c00;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
         }
 
-        .services-items {
+        .team-member p {
+            color: #eaeaea;
+        }
+
+        /* Benefits Section */
+        .benefits {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .service-item {
-            background-color: #fff;
+        .benefit {
+            background: #252545;
             border-radius: 10px;
-            padding: 1rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
 
-        .service-item img {
-            border-radius: 10px;
+        .benefit h3 {
+            color: #ff8c00;
             margin-bottom: 1rem;
         }
 
-        .service-item h3 {
-            font-size: 1.5rem;
-            color: #232a34;
+        .benefit p {
+            color: #eaeaea;
         }
 
-        .service-item p {
-            color: #6d6d6d;
-        }
-
-        .testimonials {
-            background-color: #f8f9fa;
-        }
-
-        .testimonials h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #00adb5;
-        }
-
-        .testimonial {
-            font-style: italic;
-            color: #6d6d6d;
-            margin-bottom: 1rem;
-        }
-
-        .testimonial span {
-            display: block;
-            margin-top: 1rem;
-            font-weight: bold;
-            color: #232a34;
-        }
-
+        /* Contact Section */
         .contact {
-            background-color: #fff;
-        }
-
-        .contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #00adb5;
+            background: #1b1b2f;
+            padding: 4rem 2rem;
+            text-align: center;
         }
 
         .contact form {
-            max-width: 500px;
+            max-width: 600px;
             margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
 
         .contact input, .contact textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
+            padding: 15px;
             border-radius: 5px;
+            border: none;
+            background: #252545;
+            color: #eaeaea;
+            font-size: 1rem;
         }
 
         .contact button {
-            background-color: #00adb5;
-            color: #fff;
-            padding: 10px 15px;
+            padding: 15px;
+            background: #ff8c00;
+            color: #1b1b2f;
+            font-weight: bold;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background 0.3s ease;
         }
 
         .contact button:hover {
-            background-color: #007b83;
+            background: #e67e00;
         }
 
         footer {
-            background-color: #232a34;
-            color: #fff;
             text-align: center;
             padding: 1rem;
+            background: #252545;
+            color: #eaeaea;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo"></div>
-        <h1>Invest Pro</h1>
-        <p>Innovación en Programación e Inversiones</p>
-    </header>
     <nav>
         <ul>
-            <li><a href="#services">Servicios</a></li>
-            <li><a href="#testimonials">Testimonios</a></li>
-            <li><a href="#contact">Contacto</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <section class="hero">
-        <h1>Soluciones Inteligentes con Invest Pro</h1>
-        <p>El futuro de la programación y las inversiones comienza aquí.</p>
-        <a href="#services" class="btn">Explorar Servicios</a>
+    <header>
+        <h1>Alpha Gain</h1>
+        <p>Your Gateway to Smart Investments</p>
+        <a href="#about">Discover More</a>
+    </header>
+    <section id="about">
+        <h2>About Alpha Gain</h2>
+        <p>Alpha Gain makes investments simple and accessible for everyone, empowering you to take control of your financial future.</p>
     </section>
-    <section id="services" class="section services">
-        <h2>Nuestros Servicios</h2>
-        <div class="services-items">
-            <div class="service-item">
-                <img src="img1.jpg" alt="Desarrollo Web">
-                <h3>Desarrollo Web</h3>
-                <p>Páginas web a medida para empresas y emprendedores. $1,000,000</p>
+    <section id="team">
+        <h2>Meet the Team</h2>
+        <div class="team">
+            <div class="team-member">
+                <img src="img1.jpg" alt="Juan Camilo Brito">
+                <h3>Juan Camilo Brito</h3>
+                <p>Project Leader</p>
             </div>
-            <div class="service-item">
-                <img src="img2.jpg" alt="Consultoría en Inversiones">
-                <h3>Consultoría en Inversiones</h3>
-                <p>Asesoramiento experto para maximizar tus rendimientos. $800,000</p>
+            <div class="team-member">
+                <img src="img2.jpg" alt="Maria Isabel Sifuentes">
+                <h3>Maria Isabel cifuentes</h3>
+                <p>UI Designer</p>
             </div>
-            <div class="service-item">
-                <img src="img3.jpg" alt="Automatización de Procesos">
-                <h3>Automatización de Procesos</h3>
-                <p>Optimización empresarial con tecnología avanzada. $1,200,000</p>
+            <div class="team-member">
+                <img src="img3.jpg" alt="Jaider">
+                <h3>Jaider</h3>
+                <p>Data Engineer</p>
+            </div>
+            <div class="team-member">
+                <img src="img4.jpg" alt="Mateo González">
+                <h3>Mathew González</h3>
+                <p>Backend Developer</p>
             </div>
         </div>
     </section>
-    <section id="testimonials" class="section testimonials">
-        <h2>Testimonios</h2>
-        <p class="testimonial">"Invest Pro mejoró mis sistemas y me ayudó a triplicar mi rentabilidad. ¡Recomendados!" <span>- Laura Gómez</span></p>
-        <p class="testimonial">"La mejor consultora en programación e inversiones que he conocido." <span>- José Pérez</span></p>
+    <section id="benefits">
+        <h2>Why Choose Alpha Gain?</h2>
+        <div class="benefits">
+            <div class="benefit">
+                <h3>Save Money</h3>
+                <p>Start small and see your wealth grow.</p>
+            </div>
+            <div class="benefit">
+                <h3>Diversify Your Portfolio</h3>
+                <p>Reduce risk and maximize potential gains.</p>
+            </div>
+            <div class="benefit">
+                <h3>Learn and Grow</h3>
+                <p>Access tailored investment learning tools.</p>
+            </div>
+        </div>
     </section>
-    <section id="contact" class="section contact">
-        <h2>Contacto</h2>
-        <form action="#" method="POST">
-            <input type="text" placeholder="Nombre" required>
-            <input type="email" placeholder="Correo Electrónico" required>
-            <textarea placeholder="Mensaje" rows="4" required></textarea>
-            <button type="submit">Enviar</button>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
         </form>
-        <p>Teléfono: +57 3233706529| Correo: camilibrito457@gmail.com.com</p>
-        <p>Ubicación: Calle 123, Ciudad cali , País colombia</p>
     </section>
     <footer>
-        <p>&copy; 2024 Invest Pro. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Alpha Gain. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
